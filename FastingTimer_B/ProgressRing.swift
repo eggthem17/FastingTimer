@@ -53,6 +53,7 @@ struct ProgressRing: View {
 			progress = 0.5
 		}
 		.frame(width: 250, height: 250)
+		.padding()
     }
 }
 

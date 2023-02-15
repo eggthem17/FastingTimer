@@ -12,6 +12,7 @@
 		5BDF1F61299CD8930085D951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDF1F60299CD8930085D951 /* Assets.xcassets */; };
 		5BDF1F64299CD8930085D951 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDF1F63299CD8930085D951 /* Preview Assets.xcassets */; };
 		5BDF1F6B299CD8A20085D951 /* ProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF1F6A299CD8A20085D951 /* ProgressRing.swift */; };
+		5BDF1F6E299CE8D70085D951 /* SwiftUIVisualEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 5BDF1F6D299CE8D70085D951 /* SwiftUIVisualEffects */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BDF1F6E299CE8D70085D951 /* SwiftUIVisualEffects in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +88,9 @@
 			dependencies = (
 			);
 			name = FastingTimer_B;
+			packageProductDependencies = (
+				5BDF1F6D299CE8D70085D951 /* SwiftUIVisualEffects */,
+			);
 			productName = FastingTimer_B;
 			productReference = 5BDF1F59299CD88F0085D951 /* FastingTimer_B.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 5BDF1F50299CD88F0085D951;
+			packageReferences = (
+				5BDF1F6C299CE8D70085D951 /* XCRemoteSwiftPackageReference "swiftui-visual-effects" */,
+			);
 			productRefGroup = 5BDF1F5A299CD88F0085D951 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -279,6 +287,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +317,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -343,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5BDF1F6C299CE8D70085D951 /* XCRemoteSwiftPackageReference "swiftui-visual-effects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lucasbrown/swiftui-visual-effects.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5BDF1F6D299CE8D70085D951 /* SwiftUIVisualEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5BDF1F6C299CE8D70085D951 /* XCRemoteSwiftPackageReference "swiftui-visual-effects" */;
+			productName = SwiftUIVisualEffects;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5BDF1F51299CD88F0085D951 /* Project object */;
 }
