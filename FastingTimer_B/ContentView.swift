@@ -27,6 +27,7 @@ struct ContentView: View {
 			header
 			
 			ProgressRing()
+				.environmentObject(fastingManager)
 			
 			times
 			
