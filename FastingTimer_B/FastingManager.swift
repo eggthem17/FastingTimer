@@ -13,10 +13,21 @@ enum FastingState {
 	case feeding
 }
 
-enum FastingPlan: String {
+enum FastingPlan: String, CaseIterable {
 	case beginner = "12:12"
 	case intermediate = "16:8"
 	case advanced = "20:4"
+	
+	var title: String {
+		switch self {
+		case .beginner:
+			return "Begginer"
+		case .intermediate:
+			return "Intermediate"
+		case .advanced:
+			return "Advanced"
+		}
+	}
 	
 	var fastingPeriod: Double {
 		switch self {
@@ -86,5 +97,9 @@ class FastingManager: ObservableObject {
 		
 		let totalTime = fastingState == .fasting ? fastingTime : feedingTime
 		progress = (elpasedTime / totalTime * 100).rounded() / 100
+	}
+	
+	func setPlan(selected: FastingPlan) {
+		fastingPlan = selected
 	}
 }

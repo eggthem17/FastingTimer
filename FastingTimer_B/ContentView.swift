@@ -52,12 +52,24 @@ extension ContentView {
 				.foregroundColor(Color(#colorLiteral(red: 0.8567120433, green: 0.5915268064, blue: 1, alpha: 1)))
 			
 			// MARK: Fasting Plan
-			Text(fastingManager.fastingPlan.rawValue)
-				.fontWeight(.bold)
-				.padding(.horizontal, 24)
-				.padding(.vertical, 8)
-				.background(BlurEffect().blurEffectStyle(.systemThickMaterial))
-				.cornerRadius(25)
+			Menu {
+				ForEach(FastingPlan.allCases, id: \.rawValue) { value in
+					Button {
+						fastingManager.setPlan(selected: value)
+					} label: {
+						Text("\(value.title) \(value.rawValue)")
+					}
+				}
+			} label: {
+				Text(fastingManager.fastingPlan.rawValue)
+					.fontWeight(.bold)
+					.padding(.horizontal, 24)
+					.padding(.vertical, 8)
+					.background(BlurEffect().blurEffectStyle(.systemThickMaterial))
+					.cornerRadius(25)
+			}
+			.foregroundColor(.primary)
+			.minimumScaleFactor(0.1)
 		}
 	}
 	
